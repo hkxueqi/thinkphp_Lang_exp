@@ -12,10 +12,13 @@ thinkphp6 Lang RCE exp
 
 ### 使用方法：
 
+```bash
+#默认
 python3 thinkphp_Lang_exp.py -u http://xxxx/index.php
-或
-python3 thinkphp_Lang_exp.py -u http://xxxx/index.php -m ../../pearcmd_path -p /tmp/shell.php
 
+#自定义
+python3 thinkphp_Lang_exp.py -u http://xxxx/index.php -m ../../pearcmd_path -p /tmp/shell.php
+```
 
 
 ### 分析文章：
